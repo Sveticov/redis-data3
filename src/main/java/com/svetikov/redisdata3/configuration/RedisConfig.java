@@ -13,12 +13,7 @@ import org.springframework.data.redis.serializer.GenericToStringSerializer;
 @ComponentScan("com.svetikov.redisdata3")
 public class RedisConfig {
 
-//    @Bean
-//    JedisConnectionFactory jedisConnectionFactory(){
-//      //  RedisStandaloneConfiguration configuration=new RedisStandaloneConfiguration("server",6379);
-//       // return new JedisConnectionFactory(configuration);
-//        return new JedisConnectionFactory();
-//    }
+
     @Bean
     LettuceConnectionFactory jedisConnectionFactory(){
         return new LettuceConnectionFactory(new RedisStandaloneConfiguration("localhost",6379));
